@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import tree from '../Assets/pic1.png'
 import './Register.css'
 import {FcGoogle} from 'react-icons/fc'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Register = () =>{
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ const Register = () =>{
                                 )}/>
                         <button id="sign-up-btn" type="submit" >Sign Up</button>
                         <p>
-                            Already have account?<a href="../Login/login.html">Log In</a> here!
+                            Already have account?<Link to="/Login">Log In</Link> here!
                         </p>
                     </form>
                 </div>
