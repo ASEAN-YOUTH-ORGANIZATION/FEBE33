@@ -6,6 +6,7 @@ import Footer from "./component/Footer/Footer"
 import Home from "./component/Home/Home"
 import Register from "./component/Register/Register"
 import Login from "./component/Login/Login"
+import Homeguest from "./component/Home/Homeguest"
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route>
             <Route path="/" element={<Home/>}/>
+            <Route path="/Home" element={<Homeguest/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Register" element={<Register/>}/>
         </Route>
