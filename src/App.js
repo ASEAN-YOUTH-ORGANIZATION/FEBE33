@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "./component/Navbar/Navbar"
 
 import { Route, Routes } from "react-router-dom"
+import Footer from "./component/Footer/Footer"
 
 
 
@@ -18,7 +19,8 @@ function App() {
 
         </Route>
       </Routes>
-
+      <Footer>
+      </Footer>
     </>
   )
 }
