@@ -17,6 +17,7 @@ const Register = () =>{
             localStorage.setItem("pass",pass);
             navigate('/Login')
         }
+        
     return(
         <section class="section-login">
             <div class="container-login text-center">
