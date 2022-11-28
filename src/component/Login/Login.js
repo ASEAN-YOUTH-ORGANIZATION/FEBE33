@@ -14,7 +14,7 @@ const Login = () =>{
     const handleSubmit = (e) =>{
         e.preventDefault();
         if(email === userEmail && pass === userPass){
-            navigate('/')
+            navigate('/Home')
             
             
         }

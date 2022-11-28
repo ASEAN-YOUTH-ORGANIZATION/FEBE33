@@ -1,0 +1,44 @@
+
+.section-jumbotron{
+    background: linear-gradient(160deg, var(--pr-color), #FCF9C6);
+}
+.image-jumbotron{
+    width: 80%;
+    border-radius: 0 10px 10px;
+    padding-top: 165px;
+    padding-left: 80px;
+    padding-bottom: 70px;
+}
+
+.wrapper-headline{
+    padding:0 2rem 0 0;
+}
+
+.headline-h1{
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.3;
+}
+
+.headline-paragraf button{
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;  
+    padding: 5px 30px; 
+    border-color: #C7D36F;
+    
+}
+.headline-paragraf button a{
+    text-decoration: none;
+    color: #C7D36F;
+}
+
+* {
+    z-index: 2;
+}
+
+.accsent-img {
+    z-index: 1;
+}
+
+
