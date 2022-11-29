@@ -6,10 +6,35 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () =>{
     const navigate = useNavigate()
-    const [pass, setPass] = useState("")
-    const [email, setEmail] = useState("")
-    const userPass = localStorage.getItem("pass")
-    const userEmail = localStorage.getItem("email")
+    const [email, setEmail ] = useState("");
+    const [errorEmail,setErrorEmail] = useState('');
+    const [pass, setPass ] = useState("");
+    const [errorPass, setErrorPass] = useState('');
+    const [error, setError] = useState('');
+    const [errors, setErrors] = useState(false);
+    const userPass = localStorage.getItem("pass");
+    const userEmail = localStorage.getItem("email");
+
+    const onChangeEmail =(e) =>{
+        const value = e.target.value
+        setEmail(value)
+        setError('')
+        if(!value){
+            setErrorEmail('Email tidak boleh kosong')
+        } else{
+            setErrorEmail('')
+        }
+    }
+    const onChangePassword = (e) =>{
+        const value = e.target.value
+        setPass(value)
+        setError('')
+        if(!value){
+            setErrorPass('Password tidak boleh kosong')
+        } else{
+            setErrorPass('')
+        }
+    }
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -17,6 +42,8 @@ const Login = () =>{
             navigate('/Home')
             
             
+        } else if(email == 0 || pass == 0){
+            setErrors(true)
         }
         else{
             navigate('/Login')
@@ -27,13 +54,33 @@ const Login = () =>{
     return(
         <section class="section-login">
             <div class="container-login text-center">
+                {
+                    error && (
+                        <div className='alert alert-danger'>
+                            <p>{error}</p>
+                        </div>
+                    )
+                }
                 <div class="login">
                     <form action="" onSubmit={handleSubmit}>
                         <h1>Login</h1>
                         <button type="submit" class="btn btn-outline-secondary btn-sm" id="login-google"><FcGoogle style={{paddingRight:'0.5rem'}} size={30}/>Login With Google</button>
                         <p>Enter your Email and Password</p>
-                        <input type="email" placeholder="Email" id="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-                        <input type="password" placeholder="Password" id="password" value={pass} onChange={(e)=> setPass(e.target.value)}/>
+                        <input type="emai" placeholder="Email" id="email"  required value={email} onChange={onChangeEmail}/>
+                        {
+                                                        errorEmail && (
+                                                            <p className="text-danger">{errorEmail}</p>
+                                                        )
+                                                    }
+                         {errors && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) ? <p id='massage'>Format Email: abc@gmail.com</p> :"" }
+                        
+                         <input type="password" placeholder="Password" id="password" required value={pass} onChange={onChangePassword}/>
+                        {
+                                                        errorPass && (
+                                                            <p className="text-danger">{errorPass}</p>
+                                                        )
+                                                    }
+                        
                         <p class="forgot-pass">
                             <a href="#">Forgot Password?</a>
                         </p>
