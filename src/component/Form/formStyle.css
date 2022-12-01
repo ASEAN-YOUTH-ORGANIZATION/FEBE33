@@ -1,0 +1,27 @@
+.form-daftar .form-card{
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFE;
+    box-shadow: 0px 0.564022px 13.5365px 4.51218px rgba(20, 20, 20, 0.08);
+    border-radius: 9.02435px;
+}
+
+.form-daftar .form-card .form-card-body label span{
+    color: red;
+}
+
+.form-daftar button{
+    border: none;
+    background: none;
+}
+
+.form-daftar .form-card .form-card-body label{
+    margin: 14px;
+}
+
+.form-daftar .form-card .form-card-body button{
+    background: #9EB23B;
+    border-radius: 27px;
+    color: white;
+    margin: 14px;
+}
