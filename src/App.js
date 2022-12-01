@@ -8,6 +8,8 @@ import Register from "./component/Register/Register"
 import Login from "./component/Login/Login"
 import Homeguest from "./component/Home/Homeguest"
 import About from "./component/About/About"
+import StatusKegiatan from "./component/StatusKegiatan/StatusKegiatan"
+import KegiatanActive from "./component/StatusKegiatan/KegiatanActive"
 
 
 
@@ -26,6 +28,8 @@ function App() {
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Register" element={<Register/>}/>
             <Route path="/About" element={<About/>}/>
+            <Route path="/Kegiatan" element={<StatusKegiatan/>}/>
+            <Route path="/kegiatan-active" element={<KegiatanActive/>}/>
         </Route>
       </Routes>
       <Footer>
