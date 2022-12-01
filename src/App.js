@@ -10,6 +10,7 @@ import Homeguest from "./component/Home/Homeguest"
 import About from "./component/About/About"
 import StatusKegiatan from "./component/StatusKegiatan/StatusKegiatan"
 import KegiatanActive from "./component/StatusKegiatan/KegiatanActive"
+import ListRelawan from "./component/ListRelawan/ListRelawan"
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Register" element={<Register/>}/>
             <Route path="/About" element={<About/>}/>
+            <Route path="/Relawan" element={<ListRelawan/>}/>
             <Route path="/Kegiatan" element={<StatusKegiatan/>}/>
             <Route path="/kegiatan-active" element={<KegiatanActive/>}/>
         </Route>
