@@ -1,0 +1,71 @@
+:root {
+    --pr-color : #C7D36F;
+}
+.about{
+    background: linear-gradient(160deg, var(--pr-color), #FCF9C6);
+}
+p{
+    font-size: 17px;
+    color: black;
+    padding-top: 2rem;
+}
+.section{
+    padding-top: 7rem;
+    padding-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(160deg, var(--pr-color), #FCF9C6);
+}
+.main-heading{
+    color: black;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.services {
+    color: #FCF9C6;
+}
+
+hr {
+    height: 2px;
+    background-image: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255), rgb(0, 0, 0));
+}
+
+.myServiceText {
+    text-align: center;
+}
+.myServiceText h3{
+    font-weight: 700;
+}
+.myServiceText span{
+    color: #C7D36F
+}
+.serviceIcon {
+    color: black;
+}
+.serviceIcon span {
+    border-color: black !important;
+}
+h5{
+    color: black;
+    font-weight: bold;
+}
+.project {
+    transition: 1s;
+    
+}
+
+.row img{
+    padding-bottom: 3rem;
+}
+.service:hover {
+    background-color: rgb(211, 23, 111);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.service:hover .serviceIcon {
+    color: white;
+}
+.service:hover .serviceIcon span {
+    border-color: white !important;
+}
+
