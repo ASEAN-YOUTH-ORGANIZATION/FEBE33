@@ -34,7 +34,7 @@ const Navbar = () =>{
                                 <Link className="nav-link" to='/Kegiatan'>Kegiatan</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/AboutUs'>About Us</Link>
+                                <Link className="nav-link" to='/About'>About Us</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/notif' className="nav-link"><IoMdNotificationsOutline/></Link>

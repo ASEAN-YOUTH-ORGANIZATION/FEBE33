@@ -8,6 +8,8 @@ import AYO from '../Assets/AYO.png'
 import { Link } from 'react-router-dom';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 
 const Homeguest = () =>{
@@ -15,7 +17,8 @@ const Homeguest = () =>{
         AOS.init({duration: 2000})
     }, []);
     return(
-        
+        <>
+        <Navbar/>
         <section class="section-jumbotron">
             <div class="container">
                 <div data-aos="fade-up" class="row-jumbotron row align-items-center">
@@ -36,7 +39,8 @@ const Homeguest = () =>{
                 </div>
             </div>
         </section>
-        
+        <Footer/>
+        </>
     )
 }
 
