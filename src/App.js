@@ -11,6 +11,9 @@ import About from "./component/About/About"
 import StatusKegiatan from "./component/StatusKegiatan/StatusKegiatan"
 import KegiatanActive from "./component/StatusKegiatan/KegiatanActive"
 import ListRelawan from "./component/ListRelawan/ListRelawan"
+import DetailKegiatanList from "./component/DetailKegiatan/DetailKegiatanList"
+import DetailKegiatanStatus from "./component/DetailKegiatan/DetailKegiatanStatus"
+import Form from "./component/Form/Form"
 
 
 
@@ -32,6 +35,9 @@ function App() {
             <Route path="/Relawan" element={<ListRelawan/>}/>
             <Route path="/Kegiatan" element={<StatusKegiatan/>}/>
             <Route path="/kegiatan-active" element={<KegiatanActive/>}/>
+            <Route path="/detail-kegiatan/:id" element={<DetailKegiatanStatus/>}/>
+            <Route path="/detail-relawan/:id" element={<DetailKegiatanList/>}/>
+            <Route path="/daftar/:id" element={<Form/>}/>
         </Route>
       </Routes>
       <Footer>
