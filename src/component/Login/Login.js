@@ -3,6 +3,8 @@ import tree from '../Assets/pic1.png'
 import './Login.css'
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Login = () =>{
     const navigate = useNavigate()
@@ -52,6 +54,8 @@ const Login = () =>{
     }
     
     return(
+        <>
+        <Navbar/>
         <section class="section-login">
             <div class="container-login text-center">
                 {
@@ -93,6 +97,8 @@ const Login = () =>{
                 </div>
             </div>
         </section>
+        <Footer/>
+        </>
     )
 }
 

@@ -3,6 +3,8 @@ import tree from '../Assets/pic1.png'
 import './Register.css'
 import {FcGoogle} from 'react-icons/fc'
 import { useNavigate, Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Register = () =>{
     const navigate = useNavigate();
@@ -119,6 +121,8 @@ const Register = () =>{
         }
         
     return(
+        <>
+        <Navbar/>
         <section class="section-login">
             <div class="container-login text-center">
                 {
@@ -200,6 +204,8 @@ const Register = () =>{
                 </div>
             </div>
         </section>
+        <Footer/>
+        </>
     )
 }
 

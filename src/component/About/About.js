@@ -4,12 +4,17 @@ import globe from '../Assets/global.jpg'
 import {MdVolunteerActivism} from 'react-icons/md'
 import volunteer from '../Assets/volunteer.jpg'
 import AOS from "aos";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+
 
 function About(){
     useEffect(() => {
         AOS.init({duration: 2000})
     }, []);
     return(
+        <>
+        <Navbar/>
         <div className="about">
             <section className="section bg-light border-bottom">
                 <div className="container">
@@ -46,6 +51,8 @@ function About(){
             </div>
         </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 
