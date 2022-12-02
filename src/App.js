@@ -24,24 +24,20 @@ import Form from "./component/Form/Form"
 function App() {
   return (
     <>
-    <Navbar/>
-      <Routes>
+    <Routes>
         <Route>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/Home" element={<Homeguest/>}/>
-            <Route path="/Login" element={<Login/>}/>
-            <Route path="/Register" element={<Register/>}/>
-            <Route path="/About" element={<About/>}/>
-            <Route path="/Relawan" element={<ListRelawan/>}/>
-            <Route path="/Kegiatan" element={<StatusKegiatan/>}/>
-            <Route path="/kegiatan-active" element={<KegiatanActive/>}/>
-            <Route path="/detail-kegiatan/:id" element={<DetailKegiatanStatus/>}/>
-            <Route path="/detail-relawan/:id" element={<DetailKegiatanList/>}/>
-            <Route path="/daftar/:id" element={<Form/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/Register" element={<Register/>}/>
+          <Route path="/AboutUs" element={<About/>}/>
+          <Route path="/Relawan" element={<ListRelawan/>}/>
+          <Route path="/Kegiatan" element={<StatusKegiatan/>}/>
+          <Route path="/kegiatan-active" element={<KegiatanActive/>}/>
+          <Route path="/detail-kegiatan/:id" element={<DetailKegiatanStatus/>}/>
+          <Route path="/detail-relawan/:id" element={<DetailKegiatanList/>}/>
+          <Route path="/daftar/:id" element={<Form/>}/>
         </Route>
       </Routes>
-      <Footer>
-      </Footer>
     </>
   )
 }

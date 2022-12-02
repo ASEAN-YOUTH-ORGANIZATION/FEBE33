@@ -20,7 +20,7 @@ function DetailKegiatanList (){
         navigation(`/daftar/${id}`)
     }
     return(
-        <section class="section-jumbotron">
+        <>
         <div className="container">
         <nav className="navbar navbar-light">
             <div className="container">
@@ -52,7 +52,7 @@ function DetailKegiatanList (){
             </div>
         </nav>
     </div>
-    </section>
+    </>
     )
 }
 

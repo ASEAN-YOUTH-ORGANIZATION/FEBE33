@@ -2,6 +2,8 @@ import {useNavigate} from "react-router-dom"
 import axios from 'axios'
 import { useEffect, useState } from "react"
 import '../StatusKegiatan/statusKegiatanStyle.css'
+import Navbar from "../Navbar/Navbar"
+import Footer from "../Footer/Footer"
 
 function ListRelawan() {
     const [show, setShow] = useState([])
@@ -20,10 +22,11 @@ function ListRelawan() {
     }
 
     return(
-
-        <section class="section-jumbotron">
+        <>
+        <Navbar/>
+        <br/>
             <div className="container kegiatan">
-            <div className="kegiatan-row row row-cols-1 row-cols-md-4 g-4 mt-5">
+            <div className="kegiatan-row row row-cols-1 row-cols-md-4 g-4 mt-5 mb-5">
                 {show.map((item, index) => {
                     return(
                         <div className="kegiatan-col col" key={item.id}>
@@ -41,7 +44,8 @@ function ListRelawan() {
                 
             </div>
         </div>
-        </section>
+        <Footer/>
+        </>
     )
 }
 

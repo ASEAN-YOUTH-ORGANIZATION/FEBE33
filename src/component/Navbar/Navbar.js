@@ -12,35 +12,35 @@ import {FaUserCircle} from 'react-icons/fa'
 const Navbar = () =>{
     return(
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-fixed w-100">
-                <div class="container">
-                    <a class="navbar-brand" href="#hero">
-                        <img src={logo} alt="" width="100" class="d-inline-block "/>
+            <nav className="navbar navbar-expand-lg navbar-light bg-transparent position-fixed w-100">
+                <div className="container">
+                    <a className="navbar-brand" href="#hero">
+                        <img src={logo} alt="" width="100" className="d-inline-block "/>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
     
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto mb-6 mb-lg-0">
-                            <li class="nav-item">
-                                <Link class="nav-link active" aria-current="page" to='/'>Home</Link>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ms-auto mb-6 mb-lg-0">
+                            <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to='/Relawan'>Relawan</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to='/Relawan'>Relawan</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to='/Kegiatan'>Kegiatan</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to='/Kegiatan'>Kegiatan</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to='/AboutUs'>About Us</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to='/AboutUs'>About Us</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link to='/notif' class="nav-link"><IoMdNotificationsOutline/></Link>
+                            <li className="nav-item">
+                                <Link to='/notif' className="nav-link"><IoMdNotificationsOutline/></Link>
                             </li>
-                            <li class="nav-item">
-                                <Link to='/account' class="nav-link"><FaUserCircle/></Link>
+                            <li className="nav-item">
+                                <Link to='/account' className="nav-link"><FaUserCircle/></Link>
                             </li>
                         </ul>
                         

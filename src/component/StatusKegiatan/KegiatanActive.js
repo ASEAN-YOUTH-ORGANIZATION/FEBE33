@@ -1,3 +1,5 @@
+import Navbar from "../Navbar/Navbar"
+import Footer from "../Footer/Footer"
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import {useNavigate} from "react-router-dom"
@@ -27,8 +29,11 @@ function KegiatanActive() {
     }
 
     return(
-        <section class="section-jumbotron">
-            <div className="container kegiatan">
+        <>
+        <Navbar/>
+        <br />
+        <br/>
+        <div className="kegiatan container">
             <header className="header mt-5">
                 <h4>My Activities</h4>
                 <div className="sub-nav d-flex text-decoration-none">
@@ -37,7 +42,7 @@ function KegiatanActive() {
                 </div>
             </header>
 
-            <div className="kegiatan-row row row-cols-1 row-cols-md-4 g-4 mt-3">
+            <div className="kegiatan-row row row-cols-1 row-cols-md-4 g-4 mt-3 mb-5">
                 {show.map((item, index) => {
                     return(
                         <div className="kegiatan-col col" key={item.id}>
@@ -56,7 +61,8 @@ function KegiatanActive() {
                 
             </div>
         </div>
-        </section>
+        <Footer/>
+        </>
     )
 }
 

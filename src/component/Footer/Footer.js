@@ -25,7 +25,7 @@ const Footer = () =>{
           
           </Col>
           <Col size={12} md={6} lg={4}>
-              <div class="fitur">
+              <div className="fitur">
                 <h1 >iGreen</h1>
                 <a href="#">Home</a>
                 <a href="#">Relawan</a>
@@ -35,7 +35,7 @@ const Footer = () =>{
               </div>
           </Col>
           <Col size={12} md={2} lg={2}>
-              <div class="wrapper-col-4">
+              <div className="wrapper-col-4">
                 <h1>Challenge Partner Kami</h1>
                 <img src={asean} alt=""/>
               </div>
@@ -44,7 +44,7 @@ const Footer = () =>{
           
         </Row>
         <div className='wrapper-last-footer d-flex justify-content-between'>
-            <div class="copyright">@2022 - iGreen - Asean Youth Organization</div>
+            <div className="copyright">@2022 - iGreen - Asean Youth Organization</div>
         </div>
       </Container>
       </footer>

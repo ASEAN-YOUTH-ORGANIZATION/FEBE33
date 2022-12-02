@@ -1,17 +1,10 @@
-:root {
-    --pr-color : #C7D36F;
-}
+
 * {
     z-index: 2;
 }
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f3fff4;
-}
-
-.section-jumbotron{
-    padding: 5rem;
-    background: linear-gradient(160deg, var(--pr-color), #FCF9C6);
 }
 
 .detail .detail-card {
@@ -27,7 +20,7 @@ body {
 
 .detail .detail-card .detail-card-body h5{
     position: absolute;
-    bottom: 400px;
+    bottom: 650px;
     left: 20px;
     width: 50%;
     color: white;

@@ -46,7 +46,7 @@ function Form() {
     }
 
     return(
-        <section class="section-jumbotron">
+        <section className="section-jumbotron">
         <div className="container">
         <nav className="navbar navbar-light">
             <div className="container">
