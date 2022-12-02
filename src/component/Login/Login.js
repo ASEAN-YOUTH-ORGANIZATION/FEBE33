@@ -6,23 +6,23 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () =>{
     const navigate = useNavigate()
-    const [email, setEmail ] = useState("");
-    const [errorEmail,setErrorEmail] = useState('');
+    const [username, setUsername ] = useState("");
+    const [errorUsername,setErrorUsername] = useState('');
     const [pass, setPass ] = useState("");
     const [errorPass, setErrorPass] = useState('');
     const [error, setError] = useState('');
     const [errors, setErrors] = useState(false);
     const userPass = localStorage.getItem("pass");
-    const userEmail = localStorage.getItem("email");
+    const userUsername = localStorage.getItem("username");
 
-    const onChangeEmail =(e) =>{
+    const onChangeUsername = (e) =>{
         const value = e.target.value
-        setEmail(value)
+        setUsername(value)
         setError('')
         if(!value){
-            setErrorEmail('Email tidak boleh kosong')
+            setErrorUsername('Username Tidak Boleh Kosong')
         } else{
-            setErrorEmail('')
+            setErrorUsername('')
         }
     }
     const onChangePassword = (e) =>{
@@ -38,11 +38,11 @@ const Login = () =>{
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        if(email === userEmail && pass === userPass){
+        if(username === userUsername && pass === userPass){
             navigate('/Home')
             
             
-        } else if(email == 0 || pass == 0){
+        } else if(username == 0 || pass == 0){
             setErrors(true)
         }
         else{
@@ -65,15 +65,13 @@ const Login = () =>{
                     <form action="" onSubmit={handleSubmit}>
                         <h1>Login</h1>
                         <button type="submit" class="btn btn-outline-secondary btn-sm" id="login-google"><FcGoogle style={{paddingRight:'0.5rem'}} size={30}/>Login With Google</button>
-                        <p>Enter your Email and Password</p>
-                        <input type="emai" placeholder="Email" id="email"  required value={email} onChange={onChangeEmail}/>
+                        <p>Enter your Username and Password</p>
+                        <input type="text" placeholder="Username" id="username" required value={username} onChange={onChangeUsername}/>
                         {
-                                                        errorEmail && (
-                                                            <p className="text-danger">{errorEmail}</p>
+                                                        errorUsername && (
+                                                            <p className="text-danger">{errorUsername}</p>
                                                         )
                                                     }
-                         {errors && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) ? <p id='massage'>Format Email: abc@gmail.com</p> :"" }
-                        
                          <input type="password" placeholder="Password" id="password" required value={pass} onChange={onChangePassword}/>
                         {
                                                         errorPass && (
